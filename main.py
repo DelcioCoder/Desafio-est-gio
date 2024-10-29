@@ -1,5 +1,4 @@
 import pygame
-import sys
 
 # My modules 
 from settings import Settings
@@ -12,7 +11,7 @@ def run_game():
     ai_settings = Settings()
     screen = pygame.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))  # Corrigido o erro de digitação
     pygame.display.set_caption("Alien Invasion")
-    ship = Ship(screen)
+    ship = Ship(ai_settings, screen)
 
     # Inicia o laço principal do jogo
     while True:
